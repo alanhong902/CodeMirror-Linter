@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+   <head> 
+      <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"> 
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/codemirror.css"> 
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/addon/lint/lint.css"> 
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/addon/hint/show-hint.css"> 
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/codemirror.js"></script> 
+
+      <script type="text/javascript" src="http://htmlhint.com/js/htmlhint.js"></script>
+      
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/mode/javascript/javascript.js"></script> 
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/mode/htmlmixed/htmlmixed.js"></script> 
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/mode/css/css.js"></script> 
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/mode/xml/xml.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/mode/clike/clike.js"></script> 
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/mode/php/php.js"></script>
+
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/addon/selection/active-line.js"></script> 
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/addon/edit/matchbrackets.js"></script> 
+
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/addon/hint/anyword-hint.js"></script> 
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/addon/hint/css-hint.js"></script> 
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/addon/hint/html-hint.js"></script> 
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/addon/hint/javascript-hint.js"></script> 
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/addon/hint/xml-hint.js"></script> 
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/addon/hint/show-hint.js"></script> 
+
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/addon/lint/lint.js"></script> 
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/addon/lint/javascript-lint.js"></script> 
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/addon/lint/html-lint.js"></script> 
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/addon/lint/css-lint.js"></script> 
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/addon/lint/json-lint.js"></script>
+      <script type="text/javascript" src="./addon/parser/php/php-parser.min.js"></script>
+      <script type="text/javascript" src="./addon/lint/php-lint.js"></script>
+      <script type="text/javascript" src="./addon/lint/csslint.js"></script>
+      
+      <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jshint/r07/jshint.js"></script> 
+      
+      <style type="text/css">
+        .CodeMirror {
+          font-size: 15px;
+          width: 100%, ;
+          height: 100%;
+        }
+      </style>
+   </head> 
+   <body>
+      <select id="languages" onchange="onselectlanguage()">
+        <option value="JavaScript" selected>JavaScript</option>
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="PHP">PHP</option>
+        <!-- <option value="Java">Java</option> -->
+      </select>
+      <input type="button" value="Enable Lint" onclick="enableLint()"> 
+      <input type="button" value="Disable Lint" onclick="disableLint()"> 
+      <h2>Linter Demo</h2> 
+      <p>
+        <div id="code-js"></div>
+      </p> 
+   </body>
+   <script type="text/javascript" src="script.js"></script>
+</html>
